@@ -1,0 +1,25 @@
+.chamada {
+    width: 100%;
+    height: 100vh;
+    background-color: rgb(95, 0, 0);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.chamada {
+    nav {
+        align-items: center;
+        justify-content: center;
+        background-color: rgb(255, 255, 255);
+        width: 40%;
+        height: 55vh;
+        display: flex;
+        flex-direction: column;
+
+        input {
+            width: 50vh;
+            margin-bottom: 2vh;
+        }
+    }
+}
