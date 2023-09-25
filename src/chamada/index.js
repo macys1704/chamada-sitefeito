@@ -53,9 +53,10 @@ export default function Chamada() {
       <nav>
         <h1>Chamada</h1>
         <input value={nome} onChange={(e) => setNome(e.target.value)}></input>
+        <div>
         <button onClick={Salvar}>Salvar</button>
         <button onClick={listar}>Mostrar Lista</button>
-        
+        </div>
         <table>
           <thead>
             <tr>
