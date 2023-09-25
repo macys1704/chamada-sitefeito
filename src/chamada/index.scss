@@ -20,6 +20,28 @@
         input {
             width: 50vh;
             margin-bottom: 2vh;
+            border-radius:15px ;
+            padding: 8px;
+            border: solid 1px black;
+        }
+
+        button{
+            background-color: rgb(221, 219, 219);
+            outline: none;
+            border: solid 1px black;
+            font-weight: 700;
+            padding: 8px 20px;
+            margin: 5px;
+            border-radius: 20px;
+        }
+
+        table{
+            tbody{
+                button{
+                    border-radius: 5px;
+                    padding: 5px;
+                }
+            }
         }
     }
 }
