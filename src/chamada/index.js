@@ -5,7 +5,7 @@ import axios from 'axios';
 export default function Chamada() {
   const [nome, setNome] = useState('');
   const [listaChamada, setListaChamada] = useState([]);
-  
+
 
   async function Salvar() {
 
@@ -13,24 +13,18 @@ export default function Chamada() {
 
       let inscricao = {
         nome: nome
-        
+
       };
 
-      
       setNome('');
       listar()
-     
 
       let url = 'http://localhost:5000/inserir';
       let resposta = await axios.post(url, inscricao);
-      
 
     } catch (err) {
 
     }
-
-
-
   }
 
   async function listar() {
@@ -40,6 +34,7 @@ export default function Chamada() {
     setListaChamada(resposta.data);
   }
 
+
   async function apagar(id) {
     let url = `http://localhost:5000/deletar/${id}`
 
@@ -48,14 +43,25 @@ export default function Chamada() {
     listar()
   }
 
+
+  async function alterar(id) {
+    let url = `http://localhost:5000/alterar/${id}`
+    
+    setNome('');
+
+    let resposta = await axios.put(url, { nome: nome })
+
+    
+  }
+
   return (
     <div className="chamada">
       <nav>
         <h1>Chamada</h1>
         <input value={nome} onChange={(e) => setNome(e.target.value)}></input>
         <div>
-        <button onClick={Salvar}>Salvar</button>
-        <button onClick={listar}>Mostrar Lista</button>
+          <button onClick={Salvar}>Salvar</button>
+          <button onClick={listar}>Mostrar Lista</button>
         </div>
         <table>
           <thead>
@@ -68,6 +74,7 @@ export default function Chamada() {
                 <td>{item.id_chamada}</td>
                 <td>{item.nm_nome}</td>
                 <button onClick={() => apagar(item.id_chamada)}>APAGAR</button>
+                <button onClick={() => alterar(item.id_chamada)}>alterar</button>
               </tr>
             ))}
           </tbody>
