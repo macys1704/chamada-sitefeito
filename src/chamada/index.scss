@@ -1,7 +1,8 @@
 .pagina-autozone {
-    width: 100%;
     display: flex;
     flex-direction: column;
+    align-items: center;
+    justify-content: center;
     background-color: rgb(255, 255, 255);
 
     .cabecalho {
@@ -26,33 +27,34 @@
     }
 
     .meio {
-        background-color: rgb(169, 168, 168);
+        background-color: rgba(0, 0, 0, 0.900);
         height: 50vh;
         margin-top: 15vh;
-        width: 100%;
+        width: 98.7vw;
         display: flex;
         justify-content: space-evenly;
         align-items: center;
+        color: white;
 
         img {
-            border-radius: 20px;
+            border-radius: 15px;
         }
 
         div {
 
             h1 {
                 font: 4vh arial;
-                width: 90vh;
+                width: 60vh;
             }
 
             p {
                 margin-top: 5vh;
-                border-radius: 20px;
+                border-radius: 15px;
                 padding: 10px;
                 font: 2.3vh arial;
                 width: 45vh;
                 text-align: center;
-                background: yellow;
+                background: red;
 
             }
         }
@@ -69,11 +71,11 @@
         justify-content: center;
 
         .section {
-
-            border-radius: 20px;
+            color: white;
+            border-radius: 15px;
             width: 50%;
             height: 85vh;
-            background-color: yellow;
+            background-color: rgba(0, 0, 0, 0.900);
             padding: 20px;
             gap: 5px;
 
@@ -88,10 +90,7 @@
                 font-size: 28px;
             }
 
-           h3{
-            color: red;
-            font-size: 25px
-           }
+           
           
 
             .input {
@@ -135,17 +134,18 @@
           
           button {
             font-size: 2.4vh;
-            border-radius: 10px;
+            border-radius: 15px;
             color: white;
-            margin-top: 2vh;
-            background-color: red;
+             margin-top: 2vh;
+            background-color:red;
             width: 25%;
             height: 5vh;
             border: none;
             cursor: pointer;
             
               &:hover {
-                background-color: #27ae60; 
+                transition: 0.5s;
+                background-color:#707070;
               }
         }
 
@@ -157,12 +157,12 @@
 
 
     table {
-      width: 100%;
+      width: 80%;
       border-collapse: collapse;
+      margin-bottom: 80px;
       
       thead{
         tr{
-          background-color:  red;
           width: 100%;
         }
       }
@@ -174,31 +174,32 @@
       }
 
       tr{
-        background-color: #ff0000;
+   
         width: 100%;
       }
     
       th {
-        background-color: #ff0000;
+        background-color:red;
         color: #fff; 
       }
     
       tbody{
         tr{
-          background-color: yellow;
-          padding: 10px;
+          background-color: rgba(226, 226, 226, 0.664);
+          padding: 15px;
 
           div{
 
-            margin: 10px;
+            margin: 20px;
           }
         }
       }
     
       button {
-        background-color: #ff0000;
+        background-color: red;
         color: #fff; 
         padding: 10px 20px;
+        border-radius: 15px;
         border: none;
         cursor: pointer;
         margin-right: 5px;
@@ -206,7 +207,8 @@
       }
     
       button:hover {
-        background-color: #ff6666;
+        transition: 0.5s;
+                background-color:#707070;
       }
     }
     

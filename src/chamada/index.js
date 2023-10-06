@@ -142,13 +142,13 @@ export default function Chamada() {
       <table>
         <thead>
           <tr>
-            <th>id</th>
+            <th>ID</th>
             <th>Produto</th>
             <th>Marca</th>
             <th>Categoria</th>
             <th>Valor</th>
             <th>Modelo</th>
-            <th>Ações</th>
+            <th></th>
           </tr>
         </thead>
         <tbody>
