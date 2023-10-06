@@ -60,112 +60,156 @@
 
     aside {
 
-        margin-top: 20vh;
-        margin-bottom: 20vh;
+        margin-top: 10vh;
+        margin-bottom: 10vh;
         width: 100%;
         display: flex;
+        flex-direction: column;
         align-items: center;
         justify-content: center;
 
-        div {
+        .section {
 
             border-radius: 20px;
-            width: 40%;
-            height: 80vh;
-            //background: linear-gradient(rgb(210, 236, 43), rgb(182, 191, 1));
+            width: 50%;
+            height: 85vh;
             background-color: yellow;
+            padding: 20px;
+            gap: 5px;
 
             display: flex;
             flex-direction: column;
             align-items: center;
-            justify-content: center;
+            justify-content:space-evenly;
 
             h1 {
-                margin-bottom: 5vh;
+                margin-bottom: 4vh;
+                margin-top: 5vh;
+                font-size: 28px;
             }
+
+           
+          
 
             .input {
                 display: flex;
+                flex-direction: column;
                 justify-content: center;
-                margin-top: 1vh;
-                margin-bottom: 2vh;
-                background-color: aliceblue;
-                width: 50%;
-                height: 3.2vh;
-                border-radius: 10px;
+                align-items: center;
+                width: 100%;
+                
+                p{
+                  font-size: 22px;
+                  margin-bottom: 5px;
+                  font-weight: 500;
+                  text-align: left;
+                }
 
                 input {
-                    background-color: transparent;
+                    background-color:#fff;
                     border: transparent;
-                    width: 100%;
+                    width:50% ;
                     padding-left: 20px;
-                    height: 3.2vh;
+                    height: 3.5vh;
                     border-radius: 10px;
+                    outline: 0;
+                    border: 1px solid #000;
+
+                    font-size: 20px;
                 }
             }
 
         }
 
-        button {
+        .buttons{
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          justify-content: center;
+          width: 100%;
+          gap: 0px 40px;
+          margin-top: 20px;
+          
+          button {
             font-size: 2.4vh;
             border-radius: 10px;
             color: white;
             margin-top: 2vh;
             background-color: red;
-            width: 18%;
+            width: 25%;
             height: 5vh;
+            border: none;
+            cursor: pointer;
+            
+              &:hover {
+                background-color: #27ae60; 
+              }
+        }
+
+        #b1{
+          width: 30%;
+        }
         }
     }
 
+
     table {
-        width: 100%;
-        border-collapse: collapse;
-        margin-bottom: 2vw;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
+      width: 100%;
+      border-collapse: collapse;
       
-        thead {
-          background-color: #3498db; /* Cor de fundo do cabeçalho */
-          color: #fff; /* Cor do texto no cabeçalho */
-      
-          tr {
-            height: 40px;
-          }
+      thead{
+        tr{
+          background-color:  red;
+          width: 100%;
         }
-      
-        tbody {
-          tr {
-            &:nth-child(even) {
-              background-color: #f4f411; /* Cor de fundo para linhas pares */
-            }
-      
-            td {
-              padding: 20px;
-              width: 92vh;
-              text-align: left;
-            }
-      
-            td:last-child {
-              text-align: center;
-            }
+      }
+    
+      th, td {
+        padding: 10px;
+        text-align: left;
+        font-size: 22px;
+      }
+
+      tr{
+        background-color: #ff0000;
+        width: 100%;
+      }
+    
+      th {
+        background-color: #ff0000;
+        color: #fff; 
+      }
+    
+      tbody{
+        tr{
+          background-color: yellow;
+          padding: 10px;
+
+          div{
+
+            margin: 10px;
           }
         }
       }
-      
-      /* Estilo dos botões */
+    
       button {
-        padding: 8px 9px;
-        margin: 7px;
-        margin-top: 15px;
-        background-color: #ff1818; /* Cor de fundo do botão */
-        color: #fff; /* Cor do texto no botão */
+        background-color: #ff0000;
+        color: #fff; 
+        padding: 10px 20px;
         border: none;
         cursor: pointer;
-      
-        &:hover {
-          background-color: #27ae60; /* Cor de fundo do botão ao passar o mouse */
-        }
+        margin-right: 5px;
+        font-size: 16px;
       }
+    
+      button:hover {
+        background-color: #ff6666;
+      }
+    }
+    
+    
+      
+      
+     
+     
 }
