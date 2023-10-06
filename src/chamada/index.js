@@ -10,6 +10,7 @@ export default function Chamada() {
   const [modelo, setModelo] = useState('');
   const [listaChamada, setListaChamada] = useState([]);
   const [id, setId] = useState(0);
+  const [erro,setErro] = useState('');
 
   async function Salvar() {
     try {
@@ -36,7 +37,7 @@ export default function Chamada() {
 
      
     } catch (err) {
-      console.error(err);
+      setErro(err.response.data.erro); 
     }
   }
 
@@ -55,7 +56,7 @@ export default function Chamada() {
       let resposta = await axios.get(url);
       setListaChamada(resposta.data);
     } catch (err) {
-      console.error(err);
+      setErro(err.response.data.erro); 
     }
   }
 
@@ -65,7 +66,7 @@ export default function Chamada() {
       await axios.delete(url);
       listar();
     } catch (err) {
-      console.error(err);
+      setErro(err.response.data.erro); 
     }
   }
 
@@ -125,6 +126,8 @@ export default function Chamada() {
               <p>Modelo</p>
               <input type='text' value={modelo} onChange={e => setModelo(e.target.value)} />
             </div>
+
+            <h3>{erro}</h3>
 
             <div className='buttons'>
               <button onClick={Salvar}>
